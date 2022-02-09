@@ -1,4 +1,4 @@
 git add -A
-git commit -m "application -> completed"
+git commit -m ".flaskenv -> error in fix"
 git push
 git status
