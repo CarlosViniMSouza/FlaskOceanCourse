@@ -1,6 +1,5 @@
-import sqlite3
-
 from flask import Flask, grade
+import sqlite3
 
 database = "blog.db"
 secret_key = "pao_de_queijo"
@@ -35,10 +34,10 @@ def hy_user():
 
 @app.route('/route_db')
 def show_posts():
-    sql = "SELECT title, text FROM input ORDER BY inputs"
+    sql = "SELECT title, text FROM input ORDER BY id DESC"
     cur = grade.db.execute(sql)
     inputs = []
-    return inputs
+    return str(inputs)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
 git add -A
-git commit -m "add: app.py alts | connection with sqlite3 success"
+git commit -m "application -> completed"
 git push
 git status
