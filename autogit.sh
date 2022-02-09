@@ -1,7 +1,4 @@
-git init
 git add -A
-git commit -m "lesson - get started | Project inited"
-git branch -M master
-git remote add origin https://github.com/CarlosViniMSouza/FlaskOceanCourse.git
-git push -u origin master
+git commit -m "add: .flaskenv | schema.sql | app.py alts"
+git push
 git status
