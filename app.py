@@ -1,4 +1,4 @@
-from flask import Flask, grade
+from flask import Flask
 import sqlite3
 
 database = "blog.db"
@@ -19,17 +19,12 @@ def beforeRequest():
 
 @app.teardown_request
 def endRequest(exe):
-    frade.db.close()
+    grade.db.close()
 
 
 @app.route('/')
 def hello_world():  # put application's code here
     return 'Hello World!'
-
-
-@app.route(f'welcome/{id}')
-def hy_user():
-    return f'Welcome to my site {id}'
 
 
 @app.route('/route_db')
@@ -42,3 +37,8 @@ def show_posts():
 
 if __name__ == '__main__':
     app.run()
+
+
+"""
+Teacher Repository: https://github.com/feulo-ocean/aula_python_web
+"""
