@@ -1,4 +1,4 @@
 git add -A
-git commit -m "application started with successfully | alt file .sql"
+git commit -m "requirements.txt -> add | Aula 03 -> started"
 git push
 git status
