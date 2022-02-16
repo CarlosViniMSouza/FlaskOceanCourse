@@ -1,4 +1,4 @@
 git add -A
-git commit -m "requirements.txt -> add | Aula 03 -> started"
+git commit -m "Error in internal server -> fixing | dependencies in requirements.txt -> installed"
 git push
 git status

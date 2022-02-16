@@ -1,9 +1,6 @@
 from flask import Flask
 import sqlite3
 
-database = "blog.db"
-secret_key = "pao_de_queijo"
-
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -37,7 +34,6 @@ def show_posts():
 
 if __name__ == '__main__':
     app.run()
-
 
 """
 Teacher Repository: https://github.com/feulo-ocean/aula_python_web
