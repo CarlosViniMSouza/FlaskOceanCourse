@@ -1,4 +1,4 @@
 git add -A
-git commit -m "Error in internal server -> fixing | dependencies in requirements.txt -> installed"
+git commit -m "Server Error Internal -> i cant fixed!"
 git push
 git status

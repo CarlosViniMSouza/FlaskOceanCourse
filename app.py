@@ -1,5 +1,10 @@
-from flask import Flask
+from flask import Flask, g
 import sqlite3
+
+
+database = "blog.db"
+secret_key = "pao_de_queijo"
+
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -11,25 +16,22 @@ def connect_db():
 
 @app.before_request
 def beforeRequest():
-    grade.db = connect_db()
+    g.db = connect_db()
 
 
 @app.teardown_request
-def endRequest(exe):
-    grade.db.close()
+def endRequest(exc):
+    g.db.close()
 
 
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
-
-
-@app.route('/route_db')
 def show_posts():
-    sql = "SELECT title, text FROM input ORDER BY id DESC"
-    cur = grade.db.execute(sql)
+    sql = "SELECT title, text FROM inputs ORDER BY id DESC"
+    cur = g.db.execute(sql)
     inputs = []
-    return str(inputs)
+    for title, text in cur.fetchall():
+        inputs.append({"title": title, "text": text})
+    return render_templates("showInputs.html", posts=inputs)
 
 
 if __name__ == '__main__':
